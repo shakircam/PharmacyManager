@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ui.fragment.HomeFragment">
+
+  <com.google.android.material.card.MaterialCardView
+      app:layout_constraintTop_toTopOf="parent"
+      android:id="@+id/cardView"
+      app:cardBackgroundColor="@color/blue"
+      app:cardCornerRadius="10dp"
+      app:cardMaxElevation="10dp"
+      android:layout_margin="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/saleText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/todaysale"
+              android:textColor="@color/white"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="20sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/bdt"
+              android:textSize="12sp"
+              android:textColor="@color/white"
+              android:layout_marginStart="10dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/saleText" />
+
+          <androidx.constraintlayout.widget.Guideline
+              android:id="@+id/guideline"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              app:layout_constraintGuide_percent=".65"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/profitText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/todayprofit"
+              android:textSize="14sp"
+              android:textColor="@color/white"
+              android:textStyle="bold"
+              android:layout_marginEnd="10dp"
+              android:layout_marginTop="20sp"
+              app:layout_constraintStart_toStartOf="@+id/guideline"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/profit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/bdt"
+              android:textColor="@color/white"
+              android:textSize="12sp"
+              android:layout_marginEnd="10dp"
+              app:layout_constraintStart_toStartOf="@+id/guideline"
+              app:layout_constraintTop_toBottomOf="@id/profitText" />
+
+          <View
+              android:id="@+id/view"
+              app:layout_constraintTop_toBottomOf="@+id/profit"
+              android:layout_width="match_parent"
+              android:background="#F0F0F0"
+              android:layout_marginTop="8dp"
+              android:layout_height="1dp"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/monthText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/thismonth"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:layout_marginTop="8dp"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="10dp"
+              app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/salesText"
+              android:layout_width="81dp"
+              android:layout_height="25dp"
+              android:textColor="@color/white"
+              android:layout_marginStart="10dp"
+              android:text="@string/sales"
+              android:textSize="12sp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/monthText" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/purchase"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/purchase"
+              android:textColor="@color/white"
+              android:textSize="12sp"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="10dp"
+              app:layout_constraintTop_toBottomOf="@id/salesText" />
+
+          <View
+              app:layout_constraintTop_toBottomOf="@+id/purchase"
+              android:layout_width="match_parent"
+              android:layout_height="10dp"/>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:queryHint="Search Item"
+        app:iconifiedByDefault="false"
+        android:layout_margin="15dp"
+        android:background="@drawable/searchview_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

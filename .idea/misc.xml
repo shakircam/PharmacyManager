@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/add1.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/searchview_background.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/shape_button.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15328947368421053" />
+        <entry key="app/src/main/res/layout/drawer_header.xml" value="0.3067708333333333" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.29739583333333336" />
+        <entry key="app/src/main/res/layout/fragment_medicine_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_note.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22432432432432434" />
+        <entry key="app/src/main/res/layout/item_card.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.3067708333333333" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.3067708333333333" />
+        <entry key="app/src/main/res/menu/item_menu.xml" value="0.16381578947368422" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
