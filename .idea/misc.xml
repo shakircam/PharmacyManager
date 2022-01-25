@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/add1.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/button_bg.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/cart_background.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/delete.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/note.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/searchview_background.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/shape_button.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15328947368421053" />
@@ -16,6 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22432432432432434" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/medicine_cart_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.3067708333333333" />
         <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.3067708333333333" />
         <entry key="app/src/main/res/menu/item_menu.xml" value="0.16381578947368422" />

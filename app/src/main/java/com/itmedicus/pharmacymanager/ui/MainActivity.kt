@@ -42,15 +42,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId){
-            R.id.cart -> Toast.makeText(this,"cart item clicked",Toast.LENGTH_SHORT).show()
-        }
-        when(item.itemId){
-            R.id.medicine -> openMedicineFragment()
-        }
-        return item.onNavDestinationSelected(navController) ||
-                super.onOptionsItemSelected(item)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
+
 
     //open drawer when drawer icon clicked and back btn pressed
     override fun onSupportNavigateUp(): Boolean {
@@ -61,10 +55,6 @@ class MainActivity : AppCompatActivity() {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.item_menu, menu)
         return true
-    }
-
-    private fun openMedicineFragment(){
-
     }
 
 

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:background="@color/teal_700"
+            android:layout_width="0dp"
+            android:layout_height="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/capsule"
+                android:text="Capsule"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/image"
+            android:src="@drawable/pill"
+            app:layout_constraintTop_toBottomOf="@+id/cons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".25"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/brand_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Napa"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10sp"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/strength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(100mg)"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:layout_marginTop="10sp"
+            app:layout_constraintStart_toEndOf="@+id/brand_name_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/generic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracetamol"
+            android:textColor="@color/blue4"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/brand_name_text" />
+
+
+        <ImageView
+            android:id="@+id/priceText"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/taka"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/generic" />
+
+        <TextView
+            android:id="@+id/price"
+            android:text="10"
+            android:textSize="14sp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toEndOf="@+id/priceText"
+            app:layout_constraintTop_toBottomOf="@+id/generic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".60"/>
+
+        <ImageView
+            android:id="@+id/minus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            android:src="@drawable/minus3"
+            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/amount"
+            android:text="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="8dp"
+            android:background="@drawable/shape_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/minus"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <ImageView
+            android:id="@+id/plus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/amount"
+            android:src="@drawable/add2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <ImageView
+            android:id="@+id/deleteItem"
+            app:layout_constraintTop_toBottomOf="@+id/plus"
+            app:layout_constraintStart_toEndOf="@id/amount"
+            android:src="@drawable/ic_baseline_delete"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

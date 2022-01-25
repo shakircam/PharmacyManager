@@ -19,23 +19,23 @@ object Constants {
 
         val list = ArrayList<Medicine>()
         val item1 = Medicine(
-            "Capsule", "Napa", "(100mg)", "Paracetamol", 10, (array[0]))
+            "Capsule", "Napa", "(100mg)", "Paracetamol", 10, (array[0]),1)
         val item2 = Medicine(
-            "Capsule", "Tapnil", "(200mg)", "Paracetamol", 10, (array[1]))
+            "Capsule", "Tapnil", "(200mg)", "Paracetamol", 10, (array[1]),1)
         val item3 = Medicine(
-            "Capsule", "Emcil", "(400mg)", "Paracetamol", 10, (array[2]))
+            "Capsule", "Emcil", "(400mg)", "Paracetamol", 10, (array[2]),1)
         val item4 = Medicine(
-            "Capsule", "Omiplasol", "(50mg)", "Paracetamol", 10, (array[3]))
+            "Capsule", "Omiplasol", "(50mg)", "Paracetamol", 10, (array[3]),1)
         val item5 = Medicine(
-            "Capsule", "Ebatin", "(10mg)", "Paracetamol", 10, (array[4]))
+            "Capsule", "Ebatin", "(10mg)", "Paracetamol", 10, (array[4]),1)
         val item6 = Medicine(
-            "Capsule", "Yamadin", "(20mg)", "Paracetamol", 10, (array[5]))
+            "Capsule", "Yamadin", "(20mg)", "Paracetamol", 10, (array[5]),1)
         val item7 = Medicine(
-            "Capsule", "Deflacort", "(6mg)", "Paracetamol", 10, (array[6]))
+            "Capsule", "Deflacort", "(6mg)", "Paracetamol", 10, (array[6]),1)
         val item8 = Medicine(
-            "Capsule", "Trai", "(100mg)", "Paracetamol", 10, (array[7]))
+            "Capsule", "Trai", "(100mg)", "Paracetamol", 10, (array[7]),1)
         val item9 = Medicine(
-            "Capsule", "Moncil", "(100mg)", "Paracetamol", 10, (array[8]))
+            "Capsule", "Moncil", "(100mg)", "Paracetamol", 10, (array[8]),1)
 
         list.add(item1)
         list.add(item2)

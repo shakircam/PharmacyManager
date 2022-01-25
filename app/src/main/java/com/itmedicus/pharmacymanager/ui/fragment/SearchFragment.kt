@@ -14,14 +14,16 @@ import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.data.adapter.MedicineAdapter
 import com.itmedicus.pharmacymanager.databinding.FragmentCartBinding
 import com.itmedicus.pharmacymanager.databinding.FragmentSearchBinding
+import com.itmedicus.pharmacymanager.model.CartMedicine
 import com.itmedicus.pharmacymanager.ui.viewmodel.MedicineViewModel
+import com.itmedicus.pharmacymanager.utility.ItemClickListener
 import kotlinx.coroutines.launch
 
 
-class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
+class SearchFragment : Fragment(), SearchView.OnQueryTextListener,ItemClickListener {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private val adapter by lazy { MedicineAdapter() }
+    private val adapter by lazy { MedicineAdapter(this) }
     private lateinit var myViewModel: MedicineViewModel
 
     override fun onCreateView(
@@ -70,6 +72,14 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
                 adapter.setData(it)
             }
        })
+    }
+
+    override fun onItemSend(cartMedicine: CartMedicine) {
+        myViewModel.insertMedicineToCart(cartMedicine)
+    }
+
+    override fun onItemDelete(cartMedicine: CartMedicine, position: Int) {
+        // nothing
     }
 
 
