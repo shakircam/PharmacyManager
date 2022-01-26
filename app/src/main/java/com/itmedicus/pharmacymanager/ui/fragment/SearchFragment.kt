@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.data.adapter.MedicineAdapter
+import com.itmedicus.pharmacymanager.data.adapter.SalesAdapter
 import com.itmedicus.pharmacymanager.databinding.FragmentCartBinding
 import com.itmedicus.pharmacymanager.databinding.FragmentSearchBinding
 import com.itmedicus.pharmacymanager.model.CartMedicine
@@ -23,7 +24,7 @@ import kotlinx.coroutines.launch
 class SearchFragment : Fragment(), SearchView.OnQueryTextListener,ItemClickListener {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private val adapter by lazy { MedicineAdapter(this) }
+    private val adapter by lazy { SalesAdapter(this) }
     private lateinit var myViewModel: MedicineViewModel
 
     override fun onCreateView(
@@ -67,7 +68,7 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener,ItemClickListe
 
     private fun searchThroughDatabase(query: String) {
         val searchQuery = "%$query%"
-        myViewModel.searchMedicine(searchQuery).observe(this,{list ->
+        myViewModel.searchMedicineFromPurchase(searchQuery).observe(this,{list ->
             list.let {
                 adapter.setData(it)
             }

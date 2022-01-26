@@ -27,8 +27,7 @@ class CartFragment : Fragment(),ItemClickListener {
     private val adapter by lazy { CartMedicineAdapter(this) }
     private lateinit var myViewModel: MedicineViewModel
     var list = mutableListOf<CartMedicine>()
-    var totalAmount = 0
-    val cartItems = mutableListOf<CartPrice>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,12 +48,8 @@ class CartFragment : Fragment(),ItemClickListener {
         })
 
         myViewModel.getCartPrice.observe(this,{
-            cartItems.addAll(it)
-            for (i in cartItems.indices){
-                totalAmount += cartItems[i].price
-            }
-
-            binding.price.text ="$totalAmount"
+            val totalPrice = it.sumOf { it.price }
+            binding.price.text ="$totalPrice"
         })
     }
 

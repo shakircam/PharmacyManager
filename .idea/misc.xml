@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/add1.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/button_bg.xml" value="0.2418918918918919" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/cart_background.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/delete.xml" value="0.2418918918918919" />
         <entry key="app/src/main/res/drawable/note.xml" value="0.2418918918918919" />
@@ -18,8 +19,12 @@
         <entry key="app/src/main/res/layout/fragment_medicine_list.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_note.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_sales.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22432432432432434" />
+        <entry key="app/src/main/res/layout/fragment_stock.xml" value="0.2382882882882883" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_purchase.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_stock.xml" value="0.33" />
         <entry key="app/src/main/res/layout/medicine_cart_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.3067708333333333" />
         <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.3067708333333333" />

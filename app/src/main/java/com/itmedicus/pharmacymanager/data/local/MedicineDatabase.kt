@@ -6,9 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.itmedicus.pharmacymanager.model.CartMedicine
 import com.itmedicus.pharmacymanager.model.Medicine
+import com.itmedicus.pharmacymanager.model.PurchaseMedicine
 
 
-@Database(entities = [Medicine::class,CartMedicine::class],version = 1, exportSchema = false)
+@Database(entities = [Medicine::class,CartMedicine::class,PurchaseMedicine::class],version = 1, exportSchema = false)
 abstract class MedicineDatabase : RoomDatabase(){
     abstract fun medicineDao(): MedicineDao
 

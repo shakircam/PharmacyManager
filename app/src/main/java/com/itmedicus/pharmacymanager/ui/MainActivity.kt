@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.itmedicus.pharmacymanager.R
 import androidx.navigation.NavController
@@ -37,6 +38,17 @@ class MainActivity : AppCompatActivity() {
         binding.navigationView.setupWithNavController(navController)
         // connect appbar with nav controller
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        //hide bottom navigation in specific fragment
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+
+                R.id.medicine, R.id.cart,R.id.loginFragment,R.id.registrationFragment ->
+                    binding.bottomNavigationView.visibility = View.GONE
+                else ->
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
 
     }
 

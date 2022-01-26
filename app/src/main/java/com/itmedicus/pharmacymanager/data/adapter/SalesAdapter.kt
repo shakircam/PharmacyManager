@@ -6,39 +6,38 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.model.CartMedicine
-import com.itmedicus.pharmacymanager.model.Medicine
+import com.itmedicus.pharmacymanager.model.PurchaseMedicine
 import com.itmedicus.pharmacymanager.utility.ItemClickListener
 
-class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> ()  {
-    var list = mutableListOf<Medicine>()
+class SalesAdapter(private val clickListener: ItemClickListener) : RecyclerView.Adapter<SalesAdapter.SalesViewHolder> () {
+    var list = mutableListOf<PurchaseMedicine>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicineViewHolder {
 
-        return MedicineViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SalesViewHolder {
+        return SalesViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: MedicineViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SalesViewHolder, position: Int) {
 
         val currentItem = list[position]
         holder.medicineTitle.text = currentItem.medicineTitle
         holder.medicineName.text = currentItem.medicineName
         holder.generic.text = currentItem.strength
         holder.strength.text = currentItem.generic
-        holder.price.text = currentItem.price.toString()
+        holder.price.text = currentItem.sellingPrice.toString()
 
         Glide.with(holder.picture)
             .load(currentItem.picture)
             .into(holder.picture)
 
-        var currentNumber = currentItem.itemNumber
-        val basePrice = currentItem.price / currentNumber
+        var currentNumber = 1
+        val basePrice = currentItem.sellingPrice / currentNumber
         var increasePrice = currentNumber* basePrice
 
         holder.addButton.setOnClickListener {
@@ -46,7 +45,7 @@ class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerVi
             if (currentNumber < 9) {
                 currentNumber += 1
             }
-             increasePrice = currentNumber* basePrice
+            increasePrice = currentNumber* basePrice
             holder.price.text = "$increasePrice$"
             holder.itemNumber.text = currentNumber.toString()
 
@@ -56,7 +55,7 @@ class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerVi
             if (currentNumber >1){
                 currentNumber -=1
             }
-             increasePrice = currentNumber* basePrice
+            increasePrice = currentNumber* basePrice
             holder.price.text = "$increasePrice$"
             holder.itemNumber.text = currentNumber.toString()
 
@@ -74,15 +73,9 @@ class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerVi
                 currentNumber)
             clickListener.onItemSend(cartItem)
         }
-
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
-
-    class MedicineViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    class SalesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val medicineTitle = itemView.findViewById(R.id.capsule) as TextView
         val medicineName = itemView.findViewById(R.id.brand_name_text) as TextView
         val generic = itemView.findViewById(R.id.generic) as TextView
@@ -95,11 +88,13 @@ class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerVi
         val itemNumber = itemView.findViewById(R.id.amount) as TextView
     }
 
-
-    fun setData(medicineList: MutableList<Medicine>){
-        val medicineDiffUtil = MedicineDiffUtil(list, medicineList)
-        val medicineDiffResult = DiffUtil.calculateDiff(medicineDiffUtil)
-        this.list = medicineList
-        medicineDiffResult.dispatchUpdatesTo(this)
+    override fun getItemCount(): Int {
+        return list.size
     }
+
+    fun setData(medicineList: MutableList<PurchaseMedicine>){
+        this.list = medicineList
+        notifyDataSetChanged()
+    }
+
 }

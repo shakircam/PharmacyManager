@@ -8,8 +8,8 @@
         android:id="@+id/medicine"
         android:title="Medicine List" />
     <item
-        android:id="@+id/vapes"
-        android:title="User" />
+        android:id="@+id/stock"
+        android:title="StockList" />
 
     <item
         android:id="@+id/theme"
