@@ -6,7 +6,7 @@
 
     <item android:id="@+id/salesFragment"
         android:title="Purchase"
-        android:icon="@drawable/shopping_cart1" />
+        android:icon="@drawable/shoppingcartnew" />
 
     <item android:id="@+id/noteFragment"
         android:title="Note"
@@ -14,5 +14,5 @@
 
     <item android:id="@+id/reportFragment"
         android:title="Report"
-        android:icon="@drawable/report" />
+        android:icon="@drawable/assignment_24" />
 </menu>

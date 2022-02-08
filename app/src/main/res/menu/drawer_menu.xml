@@ -12,16 +12,16 @@
         android:title="StockList" />
 
     <item
+        android:id="@+id/profile"
+        android:title="Profile" />
+
+    <item
         android:id="@+id/theme"
         app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
         android:title="Theme" />
     <item
         android:id="@+id/company"
         android:title="Setting" />
-
-    <item
-        android:id="@+id/profile"
-        android:title="Profile" />
 
     <item
         android:id="@+id/logout"

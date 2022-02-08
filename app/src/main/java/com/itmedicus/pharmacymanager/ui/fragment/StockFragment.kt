@@ -7,12 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.itmedicus.pharmacymanager.R
-import com.itmedicus.pharmacymanager.data.adapter.CartMedicineAdapter
 import com.itmedicus.pharmacymanager.data.adapter.StockMedicineAdapter
-import com.itmedicus.pharmacymanager.databinding.FragmentSalesBinding
 import com.itmedicus.pharmacymanager.databinding.FragmentStockBinding
-import com.itmedicus.pharmacymanager.model.CartMedicine
 import com.itmedicus.pharmacymanager.model.PurchaseMedicine
 import com.itmedicus.pharmacymanager.ui.viewmodel.MedicineViewModel
 
@@ -38,11 +34,11 @@ class StockFragment : Fragment() {
         myViewModel = ViewModelProvider(this)[MedicineViewModel::class.java]
 
         initRecyclerView()
-        myViewModel.readMedicineFromPurchase.observe(this,{
+        myViewModel.readMedicineFromPurchase.observe(viewLifecycleOwner) {
             list.addAll(it)
             adapter.setData(it)
             binding.recyclerview.scheduleLayoutAnimation()
-        })
+        }
 
 
     }

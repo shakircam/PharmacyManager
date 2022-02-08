@@ -33,10 +33,12 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.searchView.setOnClickListener {
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+        binding.con.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
             view.findNavController().navigate(action)
         }
+
 
     }
 

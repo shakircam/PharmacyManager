@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.model.Medicine
+import com.itmedicus.pharmacymanager.model.PurchaseCart
 import com.itmedicus.pharmacymanager.model.PurchaseMedicine
 import com.itmedicus.pharmacymanager.utility.ClickListener
 import com.itmedicus.pharmacymanager.utility.ItemClickListener
@@ -44,7 +45,7 @@ class PurchaseAdapter(private val clickListener: ClickListener): RecyclerView.Ad
             val sPrice  = holder.sellingPrice.text.toString()
             val quantity  = holder.itemNumber.text.toString()
 
-            val purchaseItem = PurchaseMedicine(
+            val purchaseItem = PurchaseCart(
                 currentItem.medicineTitle,
                 currentItem.medicineName,
                 currentItem.generic,
@@ -53,7 +54,8 @@ class PurchaseAdapter(private val clickListener: ClickListener): RecyclerView.Ad
                 Integer.parseInt(sPrice),
                 currentItem.picture,
                 Integer.parseInt(quantity))
-            clickListener.onItemPurchase(purchaseItem)
+            clickListener.onItemPurchaseToCart(purchaseItem)
+
         }
 
     }

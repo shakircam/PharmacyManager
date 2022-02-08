@@ -68,11 +68,11 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener,ItemClickListe
 
     private fun searchThroughDatabase(query: String) {
         val searchQuery = "%$query%"
-        myViewModel.searchMedicineFromPurchase(searchQuery).observe(this,{list ->
+        myViewModel.searchMedicineFromPurchase(searchQuery).observe(this) { list ->
             list.let {
                 adapter.setData(it)
             }
-       })
+        }
     }
 
     override fun onItemSend(cartMedicine: CartMedicine) {

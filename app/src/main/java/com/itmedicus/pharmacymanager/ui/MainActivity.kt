@@ -43,7 +43,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
 
-                R.id.medicine, R.id.cart,R.id.loginFragment,R.id.registrationFragment ->
+                R.id.medicine,
+                R.id.cart,R.id.loginFragment,
+                R.id.registrationFragment,
+                R.id.stock,R.id.profile,
+                R.id.editProfileFragment,
+                R.id.purchaseCartFragment ->
                     binding.bottomNavigationView.visibility = View.GONE
                 else ->
                     binding.bottomNavigationView.visibility = View.VISIBLE
@@ -51,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 

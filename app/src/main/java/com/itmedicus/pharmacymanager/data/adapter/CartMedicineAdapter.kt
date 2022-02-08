@@ -36,6 +36,27 @@ class CartMedicineAdapter(private val clickListener: ItemClickListener) : Recycl
         val basePrice = currentItem.price / currentNumber
         var increasePrice = currentNumber* basePrice
 
+        holder.addButton.setOnClickListener {
+
+            if (currentNumber < 9) {
+                currentNumber += 1
+            }
+            increasePrice = currentNumber* basePrice
+            holder.price.text = "$increasePrice$"
+            holder.itemNumber.text = currentNumber.toString()
+
+        }
+
+        holder.minusButton.setOnClickListener {
+            if (currentNumber >1){
+                currentNumber -=1
+            }
+            increasePrice = currentNumber* basePrice
+            holder.price.text = "$increasePrice$"
+            holder.itemNumber.text = currentNumber.toString()
+
+        }
+
         holder.deleteItem.setOnClickListener {
 
             clickListener.onItemDelete(currentItem,position)

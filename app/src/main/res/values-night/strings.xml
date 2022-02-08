@@ -17,4 +17,15 @@
     <string name="sales">Sales</string>
     <string name="purchase">Purchase</string>
     <string name="profit">Profit</string>
+    <string name="quantity">Quantity</string>
+    <string name="piece">Piece</string>
+    <string name="purchasetext">Purchase</string>
+    <string name="_10">10</string>
+    <string name="selling_price">Selling price</string>
+    <string name="purchase_price">Purchase price</string>
+    <string name="paracetamol">Paracetamol</string>
+    <string name="_100mg">(100mg)</string>
+    <string name="napa">Napa</string>
+    <string name="pic">pic</string>
+    <string name="capsule">Capsule</string>
 </resources>

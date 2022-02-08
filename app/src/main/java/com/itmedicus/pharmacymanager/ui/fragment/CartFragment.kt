@@ -1,6 +1,7 @@
 package com.itmedicus.pharmacymanager.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -42,15 +43,17 @@ class CartFragment : Fragment(),ItemClickListener {
         myViewModel = ViewModelProvider(this)[MedicineViewModel::class.java]
 
         initRecyclerView()
-        myViewModel.readMedicineFromCart.observe(this,{
+        myViewModel.readMedicineFromCart.observe(viewLifecycleOwner) {
             list.addAll(it)
             adapter.setData(it)
-        })
+        }
 
-        myViewModel.getCartPrice.observe(this,{
+        myViewModel.getCartPrice.observe(viewLifecycleOwner) {
+            Log.d("this",it.toString())
             val totalPrice = it.sumOf { it.price }
-            binding.price.text ="$totalPrice"
-        })
+            binding.price.text = "$totalPrice"
+            binding.totalPrice.text = "$totalPrice"
+        }
     }
 
     private fun initRecyclerView() {

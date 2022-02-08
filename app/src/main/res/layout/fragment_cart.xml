@@ -33,7 +33,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="Sub Total:"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="30dp"
             android:textSize="16sp"/>
 
@@ -46,7 +46,7 @@
             android:text="1000"
             android:textStyle="bold"
             android:layout_marginEnd="50dp"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="20dp"
             android:textSize="16sp"/>
 
         <ImageView
@@ -55,7 +55,7 @@
             android:layout_height="20dp"
             android:src="@drawable/taka"
             android:layout_marginEnd="25dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/discountEd"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="1000"
+            android:text="00"
             android:textStyle="bold"
             android:layout_marginEnd="50dp"
             android:layout_marginTop="10dp"
@@ -118,19 +118,17 @@
             app:layout_constraintTop_toBottomOf="@+id/discountEd"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:background="#4A84C3"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_shape1"
             android:text="Confirm"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/grandtotalTv"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

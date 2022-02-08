@@ -40,11 +40,11 @@ class MedicineListFragment : Fragment(),ItemClickListener {
         myViewModel = ViewModelProvider(this)[MedicineViewModel::class.java]
         addDataToDb()
         initRecyclerView()
-        myViewModel.readMedicineData.observe(this,{
+        myViewModel.readMedicineData.observe(viewLifecycleOwner) {
             list.addAll(it)
             adapter.setData(it)
             binding.recyclerview.scheduleLayoutAnimation()
-        })
+        }
     }
 
     private fun initRecyclerView() {

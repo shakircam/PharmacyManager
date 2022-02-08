@@ -33,6 +33,21 @@ data class PurchaseMedicine(
     var id : Int? = null
 }
 
+@Entity(tableName = "purchase_cart_table",indices = [Index(value = ["medicineName"], unique = true)])
+data class PurchaseCart(
+    val medicineTitle : String,
+    val medicineName : String,
+    val generic : String,
+    val strength : String,
+    val purchasePrice : Int,
+    val sellingPrice : Int,
+    val picture : String,
+    val itemNumber : Int
+){
+    @PrimaryKey(autoGenerate = true)
+    var id : Int? = null
+}
+
 @Entity(tableName = "cart_table",indices = [Index(value = ["medicineName"], unique = true)])
  data class CartMedicine(
     val medicineTitle : String,

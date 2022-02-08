@@ -4,6 +4,8 @@ import com.itmedicus.pharmacymanager.model.Medicine
 
 object Constants {
 
+     var districtList = arrayOf("Dhaka", "Comilla", "Pabna")
+
     fun getMedicineList(): ArrayList<Medicine> {
 
         val array = ArrayList<String>()
