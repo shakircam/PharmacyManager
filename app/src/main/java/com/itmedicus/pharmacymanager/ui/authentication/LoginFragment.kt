@@ -1,17 +1,13 @@
-package com.itmedicus.pharmacymanager.ui.fragment
+package com.itmedicus.pharmacymanager.ui.authentication
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.addCallback
 import androidx.navigation.findNavController
-import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.databinding.FragmentLoginBinding
-import com.itmedicus.pharmacymanager.databinding.FragmentRegistrationBinding
 
 
 class LoginFragment : Fragment() {

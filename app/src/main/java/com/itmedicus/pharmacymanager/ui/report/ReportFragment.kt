@@ -1,4 +1,4 @@
-package com.itmedicus.pharmacymanager.ui.fragment
+package com.itmedicus.pharmacymanager.ui.report
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,21 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.itmedicus.pharmacymanager.R
-import com.itmedicus.pharmacymanager.databinding.FragmentHomeBinding
-import com.itmedicus.pharmacymanager.databinding.FragmentNoteBinding
 
 
-class NoteFragment : Fragment() {
-    private var _binding: FragmentNoteBinding? = null
-    private val binding get() = _binding!!
+class ReportFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentNoteBinding.inflate(inflater, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_report, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

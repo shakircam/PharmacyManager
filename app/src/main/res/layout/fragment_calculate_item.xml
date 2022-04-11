@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.cart.CalculateItemFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/cons"
+       android:background="@drawable/cart_background"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/totalTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:text="Sub Total:"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"
+          android:layout_marginStart="30dp"
+          android:textSize="16sp"/>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/price"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:text="1000"
+          android:textStyle="bold"
+          android:layout_marginEnd="50dp"
+          android:layout_marginTop="20dp"
+          android:textSize="16sp"/>
+
+      <ImageView
+          android:id="@+id/priceText"
+          android:layout_width="22dp"
+          android:layout_height="20dp"
+          android:src="@drawable/taka"
+          android:layout_marginEnd="25dp"
+          android:layout_marginTop="20dp"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/discountTv"
+          android:text="Discount:"
+          android:textSize="16sp"
+          app:layout_constraintTop_toBottomOf="@+id/totalTv"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginStart="30dp"
+          android:textStyle="bold"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/discountEd"
+          android:hint="Discount"
+          android:paddingStart="10dp"
+          android:textSize="12sp"
+          app:layout_constraintTop_toBottomOf="@+id/price"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginEnd="20dp"
+          android:layout_marginTop="8dp"
+          android:background="@drawable/button_bg"
+          android:layout_width="90dp"
+          android:layout_height="30dp"/>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/grandtotalTv"
+          android:text="Total:"
+          android:textSize="16sp"
+          app:layout_constraintTop_toBottomOf="@+id/discountTv"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginStart="30dp"
+          android:textStyle="bold"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/totalPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/discountEd"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:text="00"
+          android:textStyle="bold"
+          android:layout_marginEnd="50dp"
+          android:layout_marginTop="10dp"
+          android:textSize="16sp"/>
+
+      <ImageView
+          android:id="@+id/totalPriceIv"
+          android:layout_width="22dp"
+          android:layout_height="20dp"
+          android:src="@drawable/taka"
+          android:layout_marginEnd="25dp"
+          android:layout_marginTop="10dp"
+          app:layout_constraintTop_toBottomOf="@+id/discountEd"
+          app:layout_constraintEnd_toEndOf="parent" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/confirmBt"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="15dp"
+          android:text="Confirm"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="12sp"
+          app:backgroundTint="@color/blue"
+          app:layout_constraintTop_toBottomOf="@+id/grandtotalTv"
+          app:layout_constraintStart_toStartOf="parent" />
+
+      <View
+          app:layout_constraintTop_toBottomOf="@+id/confirmBt"
+          android:layout_width="match_parent"
+          android:layout_height="20dp"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

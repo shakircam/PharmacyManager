@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
             R.id.homeFragment,
             R.id.salesFragment,
             R.id.noteFragment,
-            R.id.reportFragment)
-            ,binding.drawerLayout)
+            R.id.reportFragment),
+             binding.drawerLayout)
 
         //menu item click handle
         binding.navigationView.setupWithNavController(navController)
@@ -46,9 +46,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.medicine,
                 R.id.cart,R.id.loginFragment,
                 R.id.registrationFragment,
-                R.id.stock,R.id.profile,
-                R.id.editProfileFragment,
-                R.id.purchaseCartFragment ->
+                R.id.stock,R.id.profile ->
                     binding.bottomNavigationView.visibility = View.GONE
                 else ->
                     binding.bottomNavigationView.visibility = View.VISIBLE

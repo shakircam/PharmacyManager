@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/homeFragment"
         android:title="Sales"
-        android:icon="@drawable/sale1" />
+        android:icon="@drawable/sell" />
 
     <item android:id="@+id/salesFragment"
         android:title="Purchase"
-        android:icon="@drawable/shoppingcartnew" />
+        android:icon="@drawable/ic_purchase" />
 
     <item android:id="@+id/noteFragment"
         android:title="Note"
@@ -14,5 +14,5 @@
 
     <item android:id="@+id/reportFragment"
         android:title="Report"
-        android:icon="@drawable/assignment_24" />
+        android:icon="@drawable/ic_report" />
 </menu>

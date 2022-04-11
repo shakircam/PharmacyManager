@@ -1,25 +1,17 @@
-package com.itmedicus.pharmacymanager.ui.fragment
+package com.itmedicus.pharmacymanager.ui.cart
 
 import android.os.Bundle
-import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.data.adapter.CartMedicineAdapter
-import com.itmedicus.pharmacymanager.data.adapter.MedicineAdapter
 import com.itmedicus.pharmacymanager.databinding.FragmentCartBinding
-import com.itmedicus.pharmacymanager.databinding.FragmentHomeBinding
 import com.itmedicus.pharmacymanager.model.CartMedicine
-import com.itmedicus.pharmacymanager.model.CartPrice
-import com.itmedicus.pharmacymanager.model.Medicine
 import com.itmedicus.pharmacymanager.ui.viewmodel.MedicineViewModel
-import com.itmedicus.pharmacymanager.utility.ItemClickListener
+import com.itmedicus.pharmacymanager.utils.ItemClickListener
 
 
 class CartFragment : Fragment(),ItemClickListener {
@@ -35,6 +27,7 @@ class CartFragment : Fragment(),ItemClickListener {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentCartBinding.inflate(inflater, container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -48,11 +41,8 @@ class CartFragment : Fragment(),ItemClickListener {
             adapter.setData(it)
         }
 
-        myViewModel.getCartPrice.observe(viewLifecycleOwner) {
-            Log.d("this",it.toString())
-            val totalPrice = it.sumOf { it.price }
-            binding.price.text = "$totalPrice"
-            binding.totalPrice.text = "$totalPrice"
+        binding.fab.setOnClickListener {
+            openCalculateBottomDialog()
         }
     }
 
@@ -71,5 +61,12 @@ class CartFragment : Fragment(),ItemClickListener {
         adapter.notifyItemRemoved(position)
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        super.onPrepareOptionsMenu(menu)
+        menu.findItem(R.id.cart).isVisible = false
+    }
 
+    fun openCalculateBottomDialog(){
+        findNavController().navigate(R.id.calculateItemFragment)
+    }
 }

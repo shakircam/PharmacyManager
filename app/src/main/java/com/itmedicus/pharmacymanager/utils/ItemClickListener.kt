@@ -1,4 +1,4 @@
-package com.itmedicus.pharmacymanager.utility
+package com.itmedicus.pharmacymanager.utils
 
 import com.itmedicus.pharmacymanager.model.CartMedicine
 

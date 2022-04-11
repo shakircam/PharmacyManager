@@ -7,15 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.data.adapter.MedicineAdapter
-import com.itmedicus.pharmacymanager.databinding.FragmentLoginBinding
 import com.itmedicus.pharmacymanager.databinding.FragmentMedicineListBinding
 import com.itmedicus.pharmacymanager.model.CartMedicine
 import com.itmedicus.pharmacymanager.model.Medicine
 import com.itmedicus.pharmacymanager.ui.viewmodel.MedicineViewModel
-import com.itmedicus.pharmacymanager.utility.Constants
-import com.itmedicus.pharmacymanager.utility.ItemClickListener
+import com.itmedicus.pharmacymanager.utils.Constants
+import com.itmedicus.pharmacymanager.utils.ItemClickListener
 
 
 class MedicineListFragment : Fragment(),ItemClickListener {

@@ -1,8 +1,11 @@
-package com.itmedicus.pharmacymanager.utility
+package com.itmedicus.pharmacymanager.utils
 
 import com.itmedicus.pharmacymanager.model.Medicine
 
 object Constants {
+
+    const val  BASE_URL = "http://note.itmedicus.org"
+    const val PAuthToken = "P4t13nt4idu53r"
 
      var districtList = arrayOf("Dhaka", "Comilla", "Pabna")
 

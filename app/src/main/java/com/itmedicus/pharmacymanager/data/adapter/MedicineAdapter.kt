@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.model.CartMedicine
 import com.itmedicus.pharmacymanager.model.Medicine
-import com.itmedicus.pharmacymanager.utility.ItemClickListener
+import com.itmedicus.pharmacymanager.utils.ItemClickListener
 
 class MedicineAdapter(private val clickListener: ItemClickListener) : RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> ()  {
     var list = mutableListOf<Medicine>()

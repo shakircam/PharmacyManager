@@ -1,21 +1,17 @@
 package com.itmedicus.pharmacymanager.data.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.model.Medicine
 import com.itmedicus.pharmacymanager.model.PurchaseCart
-import com.itmedicus.pharmacymanager.model.PurchaseMedicine
-import com.itmedicus.pharmacymanager.utility.ClickListener
-import com.itmedicus.pharmacymanager.utility.ItemClickListener
+import com.itmedicus.pharmacymanager.utils.ClickListener
 
 
 class PurchaseAdapter(private val clickListener: ClickListener): RecyclerView.Adapter<PurchaseAdapter.PurchaseViewHolder> () {

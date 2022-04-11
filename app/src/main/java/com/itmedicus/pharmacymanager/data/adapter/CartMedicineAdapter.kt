@@ -3,7 +3,6 @@ package com.itmedicus.pharmacymanager.data.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
@@ -11,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.model.CartMedicine
-import com.itmedicus.pharmacymanager.utility.ItemClickListener
+import com.itmedicus.pharmacymanager.utils.ItemClickListener
 
 class CartMedicineAdapter(private val clickListener: ItemClickListener) : RecyclerView.Adapter<CartMedicineAdapter.CartViewHolder> ()  {
     var list = mutableListOf<CartMedicine>()
