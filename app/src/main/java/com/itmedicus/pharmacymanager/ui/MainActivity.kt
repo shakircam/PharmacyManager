@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //hide bottom navigation in specific fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-
+                R.id.calculateItemFragment,
                 R.id.medicine,
                 R.id.cart,R.id.loginFragment,
                 R.id.registrationFragment,

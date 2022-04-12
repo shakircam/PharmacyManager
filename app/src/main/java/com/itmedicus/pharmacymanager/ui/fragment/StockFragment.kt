@@ -1,12 +1,15 @@
 package com.itmedicus.pharmacymanager.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.itmedicus.pharmacymanager.R
 import com.itmedicus.pharmacymanager.data.adapter.StockMedicineAdapter
 import com.itmedicus.pharmacymanager.databinding.FragmentStockBinding
 import com.itmedicus.pharmacymanager.model.PurchaseMedicine
@@ -18,7 +21,7 @@ class StockFragment : Fragment() {
     private val binding get() = _binding!!
     private val adapter by lazy { StockMedicineAdapter() }
     private lateinit var myViewModel: MedicineViewModel
-    var list = mutableListOf<PurchaseMedicine>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +29,7 @@ class StockFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentStockBinding.inflate(inflater, container, false)
+        setHasOptionsMenu(true)
        return binding.root
     }
 
@@ -33,13 +37,13 @@ class StockFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         myViewModel = ViewModelProvider(this)[MedicineViewModel::class.java]
 
-        initRecyclerView()
-        myViewModel.readMedicineFromPurchase.observe(viewLifecycleOwner) {
-            list.addAll(it)
+
+        myViewModel.readMedicineFromPurchaseCart.observe(viewLifecycleOwner) {
             adapter.setData(it)
             binding.recyclerview.scheduleLayoutAnimation()
+            Log.d("tag","stock list size::${it.size}")
         }
-
+        initRecyclerView()
 
     }
 
@@ -47,5 +51,10 @@ class StockFragment : Fragment() {
         val mRecyclerView = binding.recyclerview
         mRecyclerView.adapter = adapter
         mRecyclerView.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL,false)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        super.onPrepareOptionsMenu(menu)
+        menu.findItem(R.id.cart).isVisible = false
     }
 }

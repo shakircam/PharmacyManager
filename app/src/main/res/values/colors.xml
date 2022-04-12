@@ -35,4 +35,5 @@
     <color name="grey">#607D8B</color>
     <color name="green">#00E676</color>
     <color name="colorPrimaryDark">#7CE079</color>
+    <color name="actionBarBackgroundColor">@color/blue</color>
 </resources>

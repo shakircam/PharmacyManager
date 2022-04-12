@@ -11,7 +11,7 @@
         app:showAsAction="ifRoom"
         tools:targetApi="o" />
 
-    <item android:id="@+id/purchase"
+    <item android:id="@+id/stock"
         android:title="Purchase"
         android:icon="@drawable/purchase_menu"
         android:iconTint="@color/white"

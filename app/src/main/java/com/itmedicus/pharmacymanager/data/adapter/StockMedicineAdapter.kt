@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itmedicus.pharmacymanager.R
+import com.itmedicus.pharmacymanager.model.PurchaseCart
 import com.itmedicus.pharmacymanager.model.PurchaseMedicine
 
 class StockMedicineAdapter: RecyclerView.Adapter<StockMedicineAdapter.StockViewHolder> () {
-    var list = mutableListOf<PurchaseMedicine>()
+    var list = mutableListOf<PurchaseCart>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StockViewHolder {
@@ -54,7 +55,7 @@ class StockMedicineAdapter: RecyclerView.Adapter<StockMedicineAdapter.StockViewH
 
     }
 
-    fun setData(medicineList: MutableList<PurchaseMedicine>){
+    fun setData(medicineList: MutableList<PurchaseCart>){
         this.list = medicineList
         notifyDataSetChanged()
     }

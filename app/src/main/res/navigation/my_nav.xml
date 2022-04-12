@@ -96,7 +96,7 @@
     <fragment
         android:id="@+id/stock"
         android:name="com.itmedicus.pharmacymanager.ui.fragment.StockFragment"
-        android:label="Stock List"
+        android:label="Purchase List"
         tools:layout="@layout/fragment_stock" />
 
     <dialog
